@@ -3225,7 +3225,15 @@ angular.module('myApp', ['mobile-angular-ui.core']);
                 // since an input got focus we assume soft keyboard is showing.
                 //
                 if (h1 > h2) {
-                  scrollable.scrollTo(elem, 10);  
+                  var offset = 10;
+                  var scbt = 0;
+                  var sbt = 0;
+                  if (scrollable.scrollableContent.parentElement) {
+                      sbt = scrollable.scrollableContent.parentElement.getBoundingClientRect().top;
+                      scbt = scrollable.scrollableContent.getBoundingClientRect().top;
+                  }
+                  offset = (scbt - sbt) + offset;
+                  scrollable.scrollTo(elem, offset);  
                 }
               }, 500);              
             }
