@@ -37,8 +37,5 @@
     "bootstrap": "3",
     "fastclick": "1",
     "overthrow": "0.7"
-  },
-  "dependencies": {
-    "mobile-angular-ui": "https://github.com/daniel-prinsloo/mobile-angular-ui.git#6795fe610e036daa5805627dafc90fb361574d1c"
   }
 }
